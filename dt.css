@@ -1,0 +1,102 @@
+div img:nth-child(odd){
+     width: 300px;
+     }
+div img:nth-child(even){
+    width:100px;
+    }
+.box{
+    width: 960px;
+    margin:200px auto;
+    position: relative;
+    
+    }
+.box img{
+    border:1px solid #DDDDDD;
+    padding:10px;
+    background-color:#fff;
+    position:absolute;
+    z-index:1;
+    transition: all 0.6s ease-in-out;
+    box-shadow: 5px 5px 5px pink;
+      }
+
+        #box img:hover{
+            transform: rotate(0deg) scale(1.5);
+            z-index:2;
+            box-shadow: 5px 5px 5px pink;
+        }
+        
+        /* 移动端样式 */
+@media screen and (max-width: 600px) {
+    .box img {
+        width: 80%; /* 减小宽度以适应小屏幕 */
+        max-width: none; /* 移除最大宽度限制 */
+    }
+    
+    .box img:nth-child(1),
+    .box img:nth-child(2),
+    .box img:nth-child(3),
+    .box img:nth-child(4),
+    .box img:nth-child(5),
+    .box img:nth-child(6),
+    .box img:nth-child(7),
+    .box img:nth-child(8) {
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%) rotate(0deg); /* 居中并取消旋转 */
+        margin-bottom: 20px; /* 添加底部间距 */
+    }
+}
+
+        .box img:nth-child(1) {
+            top: 0px;
+            left: 300px;
+            transform: rotate(-15deg);
+        }
+
+        .box img:nth-child(2) {
+            width: 180px;
+             top: 0px;
+            left: 600px;
+            transform: rotate(-20deg);
+        }
+
+        .box img:nth-child(3) {
+            bottom:-80px;
+            right: 0;
+            transform: rotate(15deg);
+        }
+
+        .box img:nth-child(4) {
+            width: 140px;
+            bottom: -30px;
+            left: 460px;
+            transform: rotate(-20deg);
+        }
+
+        .box img:nth-child(5) {
+            bottom: -300px;
+            left: -400;
+            transform: rotate(-30deg);
+        }
+
+        .box img:nth-child(6) {
+            width: 180px;
+            top: 0;
+            left: 400;
+            transform: rotate(20deg);
+        }
+
+        .box img:nth-child(7) {
+            top: -150;
+            left: 700px;
+            transform: rotate(20deg);
+        }
+
+        .box img:nth-child(8) {
+            width: 140px;
+            height: 170px;
+            bottom: -20px;
+            right: 550px;
+            transform: rotate(30deg);
+        }
